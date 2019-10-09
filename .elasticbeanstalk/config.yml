@@ -1,19 +1,14 @@
 branch-defaults:
-  ops-3-auth:
-    environment: udacity-c2-restapi-dev
-    group_suffix: null
+  dev:
+    environment: udagram-viral-dev-dev
 deploy:
   artifact: ./www/Archive.zip
-environment-defaults:
-  udacity-c2-restapi-dev:
-    branch: null
-    repository: null
 global:
-  application_name: udacity-c2-restapi
+  application_name: udagram-viral-dev
   branch: null
-  default_ec2_keyname: null
+  default_ec2_keyname: udacity-udagram-dev
   default_platform: Node.js
-  default_region: us-east-2
+  default_region: ap-south-1
   include_git_submodules: true
   instance_profile: null
   platform_name: null

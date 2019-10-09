@@ -44,6 +44,7 @@ router.patch('/:id', auth_router_1.requireAuth, (req, res) => __awaiter(this, vo
 // Get a signed url to put a new item in the bucket
 router.get('/signed-url/:fileName', auth_router_1.requireAuth, (req, res) => __awaiter(this, void 0, void 0, function* () {
     let { fileName } = req.params;
+    console.log("fileName = " + fileName);
     const url = AWS.getPutSignedUrl(fileName);
     res.status(201).send({ url: url });
 }));

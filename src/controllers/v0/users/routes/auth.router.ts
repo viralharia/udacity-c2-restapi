@@ -10,11 +10,11 @@ import * as EmailValidator from 'email-validator';
 
 const router: Router = Router();
 
-async function generatePassword(plainTextPassword: string): Promise<string> {
+function generatePassword(plainTextPassword: string): any {
     //@TODO Use Bcrypt to Generate Salted Hashed Passwords
 }
 
-async function comparePasswords(plainTextPassword: string, hash: string): Promise<boolean> {
+function comparePasswords(plainTextPassword: string, hash: string): any {
     //@TODO Use Bcrypt to Compare your password to your Salted, Hashed Password
 }
 

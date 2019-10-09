@@ -17,21 +17,14 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const User_1 = require("../models/User");
-const bcrypt = __importStar(require("bcrypt"));
 const jwt = __importStar(require("jsonwebtoken"));
 const EmailValidator = __importStar(require("email-validator"));
 const router = express_1.Router();
 function generatePassword(plainTextPassword) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const saltRounds = 10;
-        let salt = yield bcrypt.genSalt(saltRounds);
-        return yield bcrypt.hash(plainTextPassword, salt);
-    });
+    //@TODO Use Bcrypt to Generate Salted Hashed Passwords
 }
 function comparePasswords(plainTextPassword, hash) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return yield bcrypt.compare(plainTextPassword, hash);
-    });
+    //@TODO Use Bcrypt to Compare your password to your Salted, Hashed Password
 }
 function generateJWT(user) {
     return jwt.sign(user.short(), "hello");
