@@ -28,5 +28,8 @@ export const config = {
       "aws_profile": process.env.AWS_PROFILE,
       "aws_media_bucket": process.env.AWS_BUCKET
     }
+  },
+  "jwt":{
+    "secretKey" : process.env.JWT_SECRETKEY === undefined ? "" : process.env.JWT_SECRETKEY
   }
 }
